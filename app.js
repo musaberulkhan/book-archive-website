@@ -10,6 +10,7 @@ const spinner = document.getElementById('spinner');
                             Add Event Listener                               */
 searchButton.addEventListener("click", () => {
     const searchInputValue = searchInput.value;
+    result.innerHTML="";  
     if (searchInputValue === "") {
         resultMessage.innerText = "Empty search box. Please write down book name...";
     }
@@ -22,16 +23,15 @@ searchButton.addEventListener("click", () => {
 /******************************************************************************
                           Load Book List From API                            */
 const loadBookList = async searchValue => {    
-    spinner.classList.remove('d-none');
+    spinner.classList.remove('d-none');    
     const url = `https://openlibrary.org/search.json?q=${searchValue}`;
     const res = await fetch(url);
-    const data = await res.json();
-    result.innerHTML="";     
+    const data = await res.json();       
     if(data.numFound === 0){
         resultMessage.innerText = "No Result Found, Please Search Again";
     }
     else{
-        resultMessage.innerText = `Number of results found: ${data.numFound}`;
+        resultMessage.innerText = `Displaying ${data.docs.length} of ${data.numFound} results `;
         displayBookDetails(data);    
     }  
     spinner.classList.add('d-none');
@@ -74,7 +74,7 @@ const checkObjectProperty = property => {
     }
 };
 
-// Checking Object Property is Exist or Not
+// Checking Image Object Property is Exist or Not
 const checkThumbnailProperty = property => {
     if(property === undefined){
         return "images/default_cover.jpg";
