@@ -4,3 +4,23 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
+
+/* Book Display Card Style  */
+.card{
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.card-img-top{
+    height: 350px;    
+    transition: all 0.5s ease;
+}
+
+.card:hover .card-img-top{
+    transform: scale(1.05);
+}
