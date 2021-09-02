@@ -22,18 +22,18 @@
     <!-------------------------    Main Section    --------------------------->
     <section class="container">
         <h1 class="text-center mt-4 fw-bold">Book Archive</h1>
-        <div class="my-4 d-flex flex-column align-items-center">
+        <div class="my-4 d-flex justify-content-center">
             <!-------------------------    Search Form    --------------------------->
-            <div class="d-flex flex-md-row flex-column align-items-center w-50">
+            <div class="d-flex flex-md-row justify-content-md-center flex-column align-items-center w-50">
                 <input type="text" class="form-control mx-3" id="search-input"
                     placeholder="Type the book name that you are looking for....">
-                <button id="search-button" class="btn btn-warning px-3 my-3 fw-bold">Search</button>
+                <button id="search-button" class="btn btn-warning px-4 my-3 fw-bold">Search</button>
             </div>
         </div>
 
         <!-------------------------      Spinner      --------------------------->
         <div class="d-flex justify-content-center">
-            <div id="spinner" class="spinner-border text-warning d-none" role="status">
+            <div id="spinner" class="p-3 spinner-border text-warning d-none" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
         </div>
@@ -42,7 +42,7 @@
         <h5 id="result-message" class="text-center"></h5>
 
         <!----------------------     Display Result      ---------------------->
-        <div id="result" class="my-5 row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 mx-3">
+        <div id="result" class="my-5 row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mx-3">
 
         </div>
     </section>

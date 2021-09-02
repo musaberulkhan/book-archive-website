@@ -52,7 +52,7 @@ const displayBookDetails = books => {
         `
         <div class="card h-100">
             <img src="${thumbnailSrc}" class="p-4 p-md-5 card-img-top" alt="...">
-            <div class="card-body px-4 py-3 px-md-4 py-md-5">
+            <div class="card-body px-4 py-3 py-md-5">
                 <h5 class="card-title mb-4">${book.title}</h5>
                 <p class="card-text"><span class="fw-bold">Author:</span> ${authorName} </p>
                 <p class="card-text"><span class="fw-bold">Publisher:</span> ${publisher} </p>
